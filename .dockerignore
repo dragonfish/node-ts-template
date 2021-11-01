@@ -1,0 +1,48 @@
+#Docker
+.dockerignore
+dockerfile
+
+#Cloud Build
+cloudbuild.yaml
+
+#git
+.git
+.gitignore
+
+#github
+.github
+
+node_modules
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom
+.buildlog
+.history
+.svn
+.hg
+.env
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Visual Studio Code
+.vscode
+
+#ESLint
+.eslintrc.json
+
+#Prettier
+.prettierrc
+
+#TypeScript
+src
+tsconfig.json
+tslint.json

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    //"module": "node12", //Use ESNext because node12/nodenext still emits cjs js for some reason and since the output is supposed to be identical it should work
+    "esModuleInterop": true,
+    // "moduleResolution": "node12",
+    "outDir": "build",
+    "target": "ES6",
+    // "target": "esnext",
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "noImplicitReturns": false,
+    // "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "compileOnSave": true,
+  "include": ["src"]
+}

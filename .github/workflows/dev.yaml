@@ -1,0 +1,40 @@
+name: Dev
+
+on:
+  push:
+    branches-ignore:
+      - staging
+      - production
+  
+  pull_request:
+    branches-ignore:
+      - staging
+      - production
+
+env:
+  SERVICE_NAME: request-trip
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install Packages
+      run: npm ci
+
+    - name: Lint
+      run: npm run lint
+
+    - name: Format
+      run: npm run format
+
+    - name: Test
+      run: npm test
