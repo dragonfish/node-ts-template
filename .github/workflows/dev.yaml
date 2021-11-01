@@ -1,22 +1,10 @@
 name: Dev
 
 on:
-  push:
-    branches-ignore:
-      - staging
-      - production
-  
-  pull_request:
-    branches-ignore:
-      - staging
-      - production
-
-env:
-  SERVICE_NAME: request-trip
+  push
 
 jobs:
-  lint:
-    name: Lint
+  default:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
