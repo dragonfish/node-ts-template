@@ -5,26 +5,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "name": "nodemon",
-      "program": "${workspaceFolder}/src/index.ts",
-      "outFiles": [
-        "${workspaceFolder}/build/*.js",
-        "!**/node_modules/**"
-      ],
+      "name": "Launch via NPM",
       "request": "launch",
-      "restart": true,
-      "runtimeExecutable": "nodemon",
+      "runtimeArgs": [
+        "run-script",
+        "debug"
+      ],
+      "runtimeExecutable": "npm",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "args": [
-        "--es-module-specifier-resolution=node"
-      ],
-      "type": "node",
-      "envFile": "${workspaceFolder}/.env",
-      "preLaunchTask": "tsc: watch - tsconfig.json"
+      "type": "pwa-node"
     },
     {
       "type": "node",

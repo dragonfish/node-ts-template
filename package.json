@@ -7,10 +7,10 @@
   "scripts": {
     "lint": "eslint ./src",
     "format": "eslint ./src --fix",
-    "test": "NODE_ENV=test jest --group=unit",
+    "debug": "nodemon -r dotenv/config src/index.ts",
+    "test": "NODE_ENV=test jest",
     "integration-test": "NODE_ENV=test jest --group=integration",
-    "dev": "tsc && nodemon -r dotenv/config --inspect build/index.js",
-    "start": "node build/server.js",
+    "start": "node build/index.js",
     "docker": "tsc && docker build . -t debug-app && docker run --rm -it -p 5000:5000 debug-app:latest"
   },
   "dependencies": {},
@@ -37,6 +37,8 @@
     "prettier": "^2.5.1",
     "supertest": "^6.1.6",
     "ts-jest": "^27.1.2",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0"
   }
 }
