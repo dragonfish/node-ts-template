@@ -15,6 +15,16 @@ jobs:
       with:
         node-version: '16'
 
+    - name: Cache node_modules
+      uses: actions/cache@v2.1.7
+      with:
+        path: |
+          **/node_modules
+        key: |
+          node-${{ hashfiles('**/package-lock.json') }}
+        restore-keys: |
+          node-
+
     - name: Install Packages
       run: npm ci
 
