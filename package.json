@@ -34,7 +34,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^27.5.1",
     "jest-node-exports-resolver": "^1.1.5",
-    "jest-runner-groups": "^2.1.0",
+    "jest-runner-groups": "^2.2.0",
     "prettier": "^2.6.1",
     "supertest": "^6.2.2",
     "ts-jest": "^27.1.4",
