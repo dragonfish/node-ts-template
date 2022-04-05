@@ -33,7 +33,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^27.5.1",
-    "jest-node-exports-resolver": "^1.1.5",
+    "jest-node-exports-resolver": "^1.1.6",
     "jest-runner-groups": "^2.2.0",
     "prettier": "^2.6.2",
     "supertest": "^6.2.2",
