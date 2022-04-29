@@ -1,5 +1,5 @@
 function greeter(greeting: string): string {
-  return `Hello, ${greeting}!`;
+	return `Hello, ${greeting}!`;
 }
 
 export default greeter;
