@@ -9,9 +9,10 @@
     "format": "eslint ./src --fix",
     "debug": "nodemon -r dotenv/config src/index.ts",
     "test": "NODE_ENV=test jest",
+    "build": "tsc ",
     "integration-test": "NODE_ENV=test jest --group=integration",
     "start": "node build/index.js",
-    "docker": "tsc && docker build . -t debug-app && docker run --rm -it -p 5000:5000 debug-app:latest"
+    "docker": "npm run build && docker build . -t debug-app && docker run --rm -it -p 5000:5000 debug-app:latest"
   },
   "dependencies": {},
   "devDependencies": {
