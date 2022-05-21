@@ -1,0 +1,16 @@
+# This is required somewhere in your script to accept user input from the keyboard.
+exec < /dev/tty
+npm run lint
+if [ $? -ne 0 ]; then
+  while true; do
+    read -p $'\n\e[33;1mDo you still want to continue? (Y/n) \e[0m' yn
+    if [ "$yn" = "" ]; then
+      yn='Y'
+    fi
+    case $yn in
+        [Yy] ) break;;
+        [Nn] ) exit 1;;
+        * ) echo "Please answer y or n for yes or no.";;
+    esac
+  done
+fi
