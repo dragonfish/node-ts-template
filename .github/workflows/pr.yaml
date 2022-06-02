@@ -6,6 +6,13 @@ on:
       - main
 
 jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v1
+
   lint:
     runs-on: ubuntu-latest
     steps:
