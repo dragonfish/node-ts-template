@@ -10,38 +10,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: 'Dependency Review'
+      - name: Dependency Review
         uses: actions/dependency-review-action@v3
 
   lint:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version-file: .nvmrc
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
 
-    - name: Cache node_modules
-      uses: actions/cache@v3
-      with:
-        path: |
-          **/node_modules
-        key: |
-          node-${{ hashfiles('**/package-lock.json') }}
-        restore-keys: |
-          node-
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: |
+            node-${{ hashfiles('**/package-lock.json') }}
+          restore-keys: |
+            node-
 
-    - name: Install Packages
-      run: npm install
-      
-    - name: Format
-      run: npm run format
+      - name: Install Packages
+        run: npm install
 
-    - name: Lint
-      run: npm run lint
+      - name: Format
+        run: npm run format
 
-    - name: Test
-      run: npm test
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
