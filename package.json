@@ -16,7 +16,7 @@
 		"@tsconfig/esm": "^1.0.5",
 		"@tsconfig/node-lts": "^18.12.5",
 		"@tsconfig/strictest": "^2.0.2",
-		"@types/jest": "^29.5.7",
+		"@types/jest": "^29.5.8",
 		"@types/node": "^20.8.10",
 		"@typescript-eslint/eslint-plugin": "^6.10.0",
 		"@typescript-eslint/parser": "^6.10.0",
