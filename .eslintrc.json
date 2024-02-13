@@ -6,19 +6,17 @@
 	},
 	"extends": [
 		"eslint:recommended",
-		"airbnb-base",
 		"plugin:@typescript-eslint/strict-type-checked",
 		"plugin:@typescript-eslint/stylistic-type-checked",
-		"airbnb-typescript/base",
-		"plugin:jest/recommended",
-		"plugin:prettier/recommended" //comment this if you want to disable prettier.
-		//"prettier" //Uncomment this if you want to disable prettier. useful for example when using vscode prettier or trunk.io
+		"plugin:jest/all",
+		// "plugin:prettier/recommended" //uncomment this if you want to enable prettier.
+		"prettier" //Uncomment this if you want to enable prettier. useful for example when using vscode prettier or trunk.io
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaVersion": "latest",
 		"sourceType": "module",
-		"project": ["**/tsconfig.json"]
+		"project": ["tsconfig.json", "test/tsconfig.json"]
 	},
 	"plugins": ["@typescript-eslint", "jest"],
 	"rules": {
@@ -26,5 +24,5 @@
 		"@typescript-eslint/no-non-null-assertion": "off",
 		"@typescript-eslint/member-ordering": "warn"
 	},
-	"ignorePatterns": "*.js"
+	"ignorePatterns": ["*.js", "**/gen"]
 }

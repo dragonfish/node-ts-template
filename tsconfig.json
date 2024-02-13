@@ -1,8 +1,7 @@
 {
 	"extends": [
 		"@tsconfig/node-lts/tsconfig.json",
-		"@tsconfig/strictest/tsconfig.json",
-		"@tsconfig/esm/tsconfig.json"
+		"@tsconfig/strictest/tsconfig.json"
 	],
 	"compilerOptions": {
 		"outDir": "build",
@@ -12,5 +11,5 @@
 		"noUncheckedIndexedAccess": false
 	},
 	"compileOnSave": true,
-	"include": ["src"]
+	"include": ["src", "test"]
 }
