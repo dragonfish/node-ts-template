@@ -9,8 +9,8 @@
 		"plugin:@typescript-eslint/strict-type-checked",
 		"plugin:@typescript-eslint/stylistic-type-checked",
 		"plugin:jest/all",
-		// "plugin:prettier/recommended" //uncomment this if you want to enable prettier.
-		"prettier" //Uncomment this if you want to enable prettier. useful for example when using vscode prettier or trunk.io
+		"plugin:prettier/recommended" //comment this if you want to enable prettier.
+		// "prettier" //comment this if you want to enable prettier. useful for example when using vscode prettier or trunk.io
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
